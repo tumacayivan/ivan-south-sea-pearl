@@ -106,17 +106,6 @@ export default function NecklaceSection() {
     >
       <div className="necklace__inner">
         <div className="necklace__grid">
-          <div className="necklace__visual">
-            <div className="necklace__visual-ring" aria-hidden="true" />
-            <figure className="necklace__frame">
-              <img
-                src="/necklace.png"
-                alt="Strand of golden South Sea pearls arranged as a necklace"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-          </div>
 
           <div className="necklace__copy">
             <p className="necklace__kicker">Featured piece</p>
@@ -144,6 +133,19 @@ export default function NecklaceSection() {
               ))}
             </dl>
           </div>
+
+          <div className="necklace__visual">
+            <div className="necklace__visual-ring" aria-hidden="true" />
+            <figure className="necklace__frame">
+              <img
+                src="/necklace.png"
+                alt="Strand of golden South Sea pearls arranged as a necklace"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+
         </div>
       </div>
     </section>
