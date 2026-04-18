@@ -16,15 +16,15 @@ export default function Navigation() {
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__inner">
         <a className="nav__brand" href="#top" aria-label="Golden South Sea Pearl home">
-          {/* <img
+          <img
             className="nav__logo"
             src="/logo.png"
             alt=""
             width={36}
             height={36}
             decoding="async"
-          /> */}
-          <span className="nav__name">Golden South Sea Pearl</span>
+          />
+          {/* <span className="nav__name">Golden South Sea Pearl</span> */}
         </a>
         <nav className="nav__links" aria-label="Primary">
           <a href="#story">The Pearl</a>
