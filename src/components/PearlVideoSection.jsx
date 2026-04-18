@@ -9,12 +9,33 @@ export default function PearlVideoSection() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
     const tryPlay = () => {
       video.play().catch(() => {});
     };
-    video.addEventListener('loadeddata', tryPlay, { once: true });
+
+    const onReady = () => tryPlay();
+
+    video.addEventListener('loadeddata', onReady);
+    video.addEventListener('canplay', onReady);
+
     if (video.readyState >= 2) tryPlay();
-    return () => video.removeEventListener('loadeddata', tryPlay);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) tryPlay();
+        });
+      },
+      { rootMargin: '0px', threshold: 0.15 }
+    );
+    io.observe(video);
+
+    return () => {
+      video.removeEventListener('loadeddata', onReady);
+      video.removeEventListener('canplay', onReady);
+      io.disconnect();
+    };
   }, []);
 
   return (
@@ -43,11 +64,12 @@ export default function PearlVideoSection() {
                 ref={videoRef}
                 className="pearl-strip__video"
                 src={PEARL_VIDEO_URL}
-                preload="metadata"
+                preload="auto"
                 muted
                 loop
                 autoPlay
                 playsInline
+                {...{ 'webkit-playsinline': 'true' }}
                 disablePictureInPicture
                 tabIndex={-1}
               />

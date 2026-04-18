@@ -83,10 +83,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 0;
+  min-height: 0;
 }
 
 .pearl-strip__frame {
+  position: relative;
   width: min(88vw, 480px);
+  max-width: 100%;
+  /* Explicit box: iOS Safari can fail to size % height video inside aspect-ratio alone */
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -94,14 +99,18 @@
     0 20px 56px -20px rgba(30, 22, 8, 0.32),
     0 0 0 1px rgba(212, 175, 55, 0.32),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: var(--ivory-deep);
 }
 
 .pearl-strip__video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
-  transform: scale(1.02);
+  transform: translateZ(0);
 }
 
 @media (max-width: 900px) {
@@ -124,5 +133,7 @@
 
   .pearl-strip__frame {
     width: min(88vw, 360px);
+    /* Fallback if aspect-ratio is ignored (older WebKit): keep a square */
+    min-height: min(88vw, 360px);
   }
 }
