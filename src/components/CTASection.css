@@ -102,14 +102,31 @@
   color: transparent;
 }
 
+.cta__copy {
+  max-width: min(64ch, 100%);
+  margin: 0 auto 3rem;
+}
+
 .cta__body {
   font-size: clamp(1.12rem, 1.45vw, 1.38rem);
   font-weight: 500;
   color: var(--ink);
   line-height: 1.68;
-  max-width: min(64ch, 100%);
-  margin: 0 auto 3rem;
+  margin: 0;
   opacity: 0.9;
+}
+
+.cta__body--accent {
+  margin-top: 1.35rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.28);
+  font-size: clamp(1.05rem, 1.3vw, 1.22rem);
+  color: var(--ink-soft);
+}
+
+.cta__body--accent strong {
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .cta__actions {

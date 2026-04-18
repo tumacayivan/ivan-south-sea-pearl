@@ -28,7 +28,7 @@ export default function Navigation() {
         </a>
         <nav className="nav__links" aria-label="Primary">
           <a href="#story">The Pearl</a>
-          <a href="#necklace">Necklace</a>
+          <a href="#jewelry">Jewelry</a>
           <a href="#heritage">Heritage</a>
           <a href="#pieces">Pieces</a>
         </nav>

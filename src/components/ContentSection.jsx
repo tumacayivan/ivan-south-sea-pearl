@@ -8,27 +8,27 @@ gsap.registerPlugin(ScrollTrigger);
 const STATS = [
   { value: '5', label: 'Years to form a single pearl' },
   { value: '1 in 10,000', label: 'Typical odds for a pearl this fine' },
-  { value: '24k', label: 'Carat-warm natural golden hue' },
+  { value: '24k', label: 'Carat-warm, natural golden hue' },
 ];
 
 const FACETS = [
   {
-    eyebrow: '01 Rarity',
+    eyebrow: '01 — Rarity',
     title: 'A gift of extraordinary patience',
     body:
-      'The Golden South Sea Pearl is cultivated from the Pinctada maxima oyster a species native to the tropical waters of the Philippines. Each pearl takes up to five years to nacre, growing in layers of aragonite so fine they refract light from within.',
+      'The Golden South Sea Pearl is cultivated from the Pinctada maxima oyster—a species native to the tropical waters of the Philippines. Each pearl takes up to five years to lay down nacre, growing in layers of aragonite so fine they refract light from within.',
   },
   {
-    eyebrow: '02 Heritage',
+    eyebrow: '02 — Heritage',
     title: 'A Philippine legacy',
     body:
       'Declared by Presidential Proclamation as the Philippines’ National Gem, the Golden South Sea Pearl is steeped in the country’s maritime history. From the Sulu Sea to the pristine shores of Palawan, generations of farmers have stewarded the oyster beds that produce the world’s finest golden pearls.',
   },
   {
-    eyebrow: '03 Craft',
+    eyebrow: '03 — Craft',
     title: 'The alchemy of luster',
     body:
-      'What distinguishes a true South Sea pearl is its orient the quiet shimmer beneath the surface. Held to the light, a golden pearl reveals a liquid glow unlike any metal or gem. It is, quite simply, the sea rendered into form.',
+      'What distinguishes a true South Sea pearl is its orient—the quiet shimmer beneath the surface. Held to the light, a golden pearl reveals a liquid glow unlike any metal or gem. It is, quite simply, the sea rendered into form.',
   },
 ];
 
@@ -145,7 +145,7 @@ export default function ContentSection() {
             The Golden South Sea Pearl is considered among the rarest, most
             coveted organic gems in the world. Cultivated in the pristine
             waters of the Philippine archipelago, it is the only pearl that
-            carries a naturally golden hue unaltered, unenhanced, drawn
+            carries a naturally golden hue—unaltered, unenhanced—drawn
             entirely from the living oyster.
           </p>
         </header>
@@ -180,11 +180,11 @@ export default function ContentSection() {
             “
           </span>
           <p>
-            The golden pearl is the Philippines offered up in a single breath  
+            The golden pearl—the Philippines offered up in a single breath—is
             a small, impossible piece of the sea, made to be worn against the
             skin.
           </p>
-          <footer>Ivan Tumacay</footer>
+          <footer>— Ivan Tumacay</footer>
         </blockquote>
       </div>
     </section>

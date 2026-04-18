@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const DETAILS = [
   {
     label: 'Pearl type',
-    value: 'Golden South Sea   cultivated from Pinctada maxima.',
+    value: 'Golden South Sea — cultivated from Pinctada maxima.',
   },
   {
     label: 'Origin',
@@ -17,12 +17,17 @@ const DETAILS = [
   {
     label: 'What stands out',
     value:
-      'Natural golden bodycolor and orient: the soft, inner light that moves when you turn the strand.',
+      'Natural golden body color and orient: the soft, inner light that moves when you turn the strand.',
   },
   {
     label: 'In my collection',
     value:
-      'A personal piece I wear and photograph not a catalogue SKU. Each pearl was chosen for how it sits next to its neighbors along the line.',
+      'A personal piece I wear and photograph — not a catalogue SKU. Each pearl was chosen for how it sits next to its neighbors along the line.',
+  },
+  {
+    label: 'Custom jewelry',
+    value:
+      'This strand is only one expression. Golden South Sea pearls can be transformed into bespoke pieces — earrings, bracelets, rings, or pendants. Each one composed around the character of the pearls and the wearer.',
   },
 ];
 
@@ -99,28 +104,28 @@ export default function NecklaceSection() {
 
   return (
     <section
-      id="necklace"
+      id="jewelry"
       ref={sectionRef}
       className="necklace"
-      aria-labelledby="necklace-heading"
+      aria-labelledby="jewelry-heading"
     >
       <div className="necklace__inner">
         <div className="necklace__grid">
 
           <div className="necklace__copy">
             <p className="necklace__kicker">Featured piece</p>
-            <h2 id="necklace-heading" className="necklace__title">
+            <h2 id="jewelry-heading" className="necklace__title">
               The strand in <em>living gold</em>
             </h2>
             <p className="necklace__lead">
-              This necklace is part of my own Golden South Sea Pearl
-              collection built pearl by pearl, not as a mass-produced line.
+              This piece is part of my own Golden South Sea Pearl
+              collection—built pearl by pearl, not as a mass-produced line.
             </p>
             <p className="necklace__body">
               South Sea strands are quiet luxury: weight at the collarbone, a
               gradient of golds when daylight moves, and that unmistakable
               depth you only get from thick nacre. The photograph is simply how
-              this piece looks in real life warm, tactile, and meant to be
+              this piece looks in real life — warm, tactile, and meant to be
               worn.
             </p>
 

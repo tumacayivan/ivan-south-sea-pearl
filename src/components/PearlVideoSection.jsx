@@ -32,7 +32,7 @@ export default function PearlVideoSection() {
             </h2>
             <p className="pearl-strip__text">
               This clip is a single Golden South Sea pearl, turning so you can
-              watch light move across natural golden nacre the quiet glow that
+              watch light move across natural golden nacre—the quiet glow that
               only comes from years in warm Philippine waters.
             </p>
           </div>

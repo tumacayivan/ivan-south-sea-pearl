@@ -19,8 +19,9 @@ export default function Footer() {
             <p className="footer__name">Golden South Sea Pearl</p>
             <p className="footer__tagline">Founded by Ivan Tumacay</p>
             <p className="footer__note">
-              Personal pieces only my own collection. If you would like to
-              reach out personally, you can email me at{' '}
+              Personal pieces from my own collection. Custom Golden South Sea
+              Pearl jewelry — necklaces, bracelets, earrings, and more — can be
+              discussed by email. Reach me at{' '}
               <a href={contactMailto()} className="footer__email">
                 {CONTACT_EMAIL}
               </a>

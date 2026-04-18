@@ -166,7 +166,7 @@ export default function ImageSequence() {
           <br /> of Pearls
         </h1>
         <p ref={subRef} className="sequence__sub">
-          Personal pieces from my own Golden South Sea Pearl collection from
+          Personal pieces from my own Golden South Sea Pearl collection—from
           the warm Philippine seas I love.
         </p>
 
@@ -179,7 +179,7 @@ export default function ImageSequence() {
       {!ready && (
         <div className="sequence__loader" role="status" aria-live="polite">
           <div className="sequence__loader-label">
-            Loading scene {percent}%
+            Loading scene — {percent}%
           </div>
           <div className="sequence__loader-bar">
             <div

@@ -11,7 +11,7 @@ export default function CTASection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.cta__kicker, .cta__title, .cta__body, .cta__actions', {
+      gsap.from('.cta__kicker, .cta__title, .cta__copy, .cta__actions', {
         y: 40,
         opacity: 0,
         duration: 1.1,
@@ -52,10 +52,19 @@ export default function CTASection() {
           A few pieces <em>from my own</em>
           <br /> Golden South Sea Pearls.
         </h2>
-        <p className="cta__body">
-          Personal pieces from my own collection. If you would like to connect,
-          send me an email anytime.
-        </p>
+        <div className="cta__copy">
+          <p className="cta__body">
+            Personal pieces from my own collection. If you would like to connect,
+            send me an email anytime.
+          </p>
+          <p className="cta__body cta__body--accent">
+            I can also talk through{' '}
+            <strong>custom Golden South Sea Pearl jewelry</strong>
+            {' '}
+            — not only strands, but bracelets, earrings, rings, and other settings
+            built around the pearls and the look you have in mind.
+          </p>
+        </div>
         <div className="cta__actions">
           <a href={contactMailto()} className="btn btn--primary">
             Email me
