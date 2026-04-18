@@ -12,6 +12,9 @@ import path from 'node:path';
  *   - `/logo.png`     →  ./logo.png
  *   - `/pearl.mp4`    →  ./pearl.mp4
  *   - `/necklace.png` →  ./necklace.png
+ *   - `/male-wearing-necklace.png`   →  ./male-wearing-necklace.png
+ *   - `/female-wearing-necklace.png` →  ./female-wearing-necklace.png
+ *   - `/bracelet.png` →  ./bracelet.png
  *
  * On `vite build`, the same assets are copied into `dist/` so the production
  * bundle is fully self-contained.
@@ -23,6 +26,12 @@ function rootAssetsPlugin() {
   const logoPath = path.resolve(root, 'logo.png');
   const pearlPath = path.resolve(root, 'pearl.mp4');
   const necklacePath = path.resolve(root, 'necklace.png');
+  const maleWearingNecklacePath = path.resolve(root, 'male-wearing-necklace.png');
+  const femaleWearingNecklacePath = path.resolve(
+    root,
+    'female-wearing-necklace.png'
+  );
+  const braceletPath = path.resolve(root, 'bracelet.png');
 
   const mimeOf = (filePath) => {
     const ext = path.extname(filePath).toLowerCase();
@@ -132,6 +141,36 @@ function rootAssetsPlugin() {
           next(err);
         }
       });
+
+      server.middlewares.use('/male-wearing-necklace.png', (req, res, next) => {
+        try {
+          if (!fs.existsSync(maleWearingNecklacePath)) return next();
+          serveFile(req, res, maleWearingNecklacePath);
+        } catch (err) {
+          next(err);
+        }
+      });
+
+      server.middlewares.use(
+        '/female-wearing-necklace.png',
+        (req, res, next) => {
+          try {
+            if (!fs.existsSync(femaleWearingNecklacePath)) return next();
+            serveFile(req, res, femaleWearingNecklacePath);
+          } catch (err) {
+            next(err);
+          }
+        }
+      );
+
+      server.middlewares.use('/bracelet.png', (req, res, next) => {
+        try {
+          if (!fs.existsSync(braceletPath)) return next();
+          serveFile(req, res, braceletPath);
+        } catch (err) {
+          next(err);
+        }
+      });
     },
 
     /**
@@ -168,6 +207,24 @@ function rootAssetsPlugin() {
 
       if (fs.existsSync(necklacePath)) {
         fs.copyFileSync(necklacePath, path.join(outDir, 'necklace.png'));
+      }
+
+      if (fs.existsSync(maleWearingNecklacePath)) {
+        fs.copyFileSync(
+          maleWearingNecklacePath,
+          path.join(outDir, 'male-wearing-necklace.png')
+        );
+      }
+
+      if (fs.existsSync(femaleWearingNecklacePath)) {
+        fs.copyFileSync(
+          femaleWearingNecklacePath,
+          path.join(outDir, 'female-wearing-necklace.png')
+        );
+      }
+
+      if (fs.existsSync(braceletPath)) {
+        fs.copyFileSync(braceletPath, path.join(outDir, 'bracelet.png'));
       }
     },
   };

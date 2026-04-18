@@ -1,0 +1,133 @@
+.bracelet {
+  position: relative;
+  width: 100%;
+  padding: clamp(6.5rem, 14vh, 11rem) 0 clamp(5.5rem, 12vh, 9.5rem);
+  background: linear-gradient(
+    165deg,
+    #fdf6e8 0%,
+    var(--ivory-soft) 28%,
+    var(--ivory) 55%,
+    #f8f2e6 100%
+  );
+  color: var(--ink);
+  border-top: 1px solid rgba(212, 175, 55, 0.14);
+  overflow: hidden;
+}
+
+.bracelet__inner {
+  width: 100%;
+  max-width: min(1680px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.bracelet__header {
+  text-align: center;
+  max-width: min(48rem, 100%);
+  margin: 0 auto clamp(1.75rem, 3.5vh, 2.5rem);
+}
+
+.bracelet__kicker {
+  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0 0 1.2rem;
+}
+
+.bracelet__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.15rem, 4.4vw, 3.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+}
+
+.bracelet__title em {
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(
+    92deg,
+    var(--gold-deep) 0%,
+    var(--gold) 45%,
+    var(--gold-light) 72%,
+    var(--gold) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bracelet__deck {
+  font-size: clamp(1.02rem, 1.25vw, 1.16rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Stacked layout: wide landscape frame, then copy — suits horizontal photography */
+.bracelet__grid {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3.5vh, 2.5rem);
+  align-items: stretch;
+}
+
+.bracelet__visual {
+  position: relative;
+  width: 100%;
+}
+
+.bracelet__glow {
+  position: absolute;
+  inset: -5% -3%;
+  background: radial-gradient(
+    ellipse at 48% 48%,
+    rgba(229, 199, 107, 0.32) 0%,
+    rgba(251, 232, 196, 0.1) 50%,
+    transparent 70%
+  );
+  filter: blur(32px);
+  pointer-events: none;
+}
+
+.bracelet__frame {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  border-radius: clamp(0.45rem, 1.1vw, 0.85rem);
+  overflow: hidden;
+  background: var(--ivory-deep);
+  box-shadow:
+    0 36px 100px -44px rgba(30, 22, 8, 0.42),
+    0 0 0 1px rgba(212, 175, 55, 0.26),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.bracelet__frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bracelet__copy {
+  width: 100%;
+  max-width: min(40ch, 100%);
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 720px) {
+  .bracelet {
+    padding: clamp(5rem, 12vh, 8rem) 0 clamp(4.5rem, 10vh, 7rem);
+  }
+}
