@@ -1,0 +1,13 @@
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--ivory);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  display: block;
+}

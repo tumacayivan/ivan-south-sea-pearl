@@ -1,0 +1,42 @@
+.pearl-strip {
+  position: relative;
+  width: 100%;
+  padding: clamp(4.5rem, 11vw, 8rem) 0;
+  background: var(--ivory);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.pearl-strip__inner {
+  width: 100%;
+  max-width: min(1680px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pearl-strip__frame {
+  width: min(88vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 16px 48px -16px rgba(30, 22, 8, 0.28),
+    0 0 0 1px rgba(212, 175, 55, 0.32),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.pearl-strip__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+@media (max-width: 720px) {
+  .pearl-strip__frame {
+    width: min(88vw, 380px);
+  }
+}

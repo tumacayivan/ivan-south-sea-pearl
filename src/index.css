@@ -1,0 +1,78 @@
+:root {
+  /* Light theme luxury palette */
+  --ivory: #fbf8f1;
+  --ivory-soft: #f5efe3;
+  --ivory-deep: #efe6d2;
+  --cream: #f9f3e3;
+  --gold: #d4af37;
+  --gold-light: #e5c76b;
+  --gold-deep: #a6842a;
+  --ink: #1b160f;
+  --ink-soft: #3a2f1f;
+  --ink-muted: #6e6250;
+
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    Arial, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(17px, 1.05vw, 19px);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  scroll-behavior: auto; /* let ScrollTrigger control */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::selection {
+  background: var(--gold-light);
+  color: var(--ink);
+}
+
+/* Subtle page grain for luxury feel */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: radial-gradient(
+      rgba(30, 22, 8, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}

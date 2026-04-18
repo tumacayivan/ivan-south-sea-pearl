@@ -1,0 +1,21 @@
+{
+  "name": "golden-south-sea-pearl",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A cinematic scroll-driven showcase of the Golden South Sea Pearl.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.2"
+  }
+}
