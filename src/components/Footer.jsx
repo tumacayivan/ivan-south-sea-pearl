@@ -17,7 +17,7 @@ export default function Footer() {
           />
           <div>
             <p className="footer__name">Golden South Sea Pearl</p>
-            <p className="footer__tagline">Founded by Ivan Tumacay · Manila</p>
+            <p className="footer__tagline">Founded by Ivan Tumacay</p>
             <p className="footer__note">
               Personal pieces only my own collection. If you would like to
               reach out personally, you can email me at{' '}
